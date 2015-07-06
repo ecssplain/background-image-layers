@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>Play with gradients</title>
+  <link rel="stylesheet" href="play.css">
+</head>
+<body>
+  <div class="play">
+    <strong>Layering #1</strong>
+    <span class="layers-1"></span>
+  </div>
+
+  <div class="play">
+    <strong>Layering #2</strong>
+    <span class="layers-2"></span>
+  </div>
+
+  <div class="play">
+    <strong>Patterns #1</strong>
+    <span class="patterns-1"></span>
+  </div>
+
+  <div class="play">
+    <strong>Patterns #2</strong>
+    <span class="patterns-2"></span>
+  </div>
+
+  <div class="play">
+    <strong>Patterns #3</strong>
+    <span class="patterns-3"></span>
+  </div>
+
+  <script src="bgimage-showcase.js"></script>
+  <script>
+    // TODO: Make this work for multiple elements simultaneously
+    bgImageShowcase.inspect(document.querySelector('.patterns-3'), {
+      padding: 30
+    });
+  </script>
+</body>
+</html>

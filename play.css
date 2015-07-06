@@ -1,0 +1,94 @@
+body {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  display: flex;
+  flex-wrap: wrap;
+}
+.play {
+  border: 1px dashed #999;
+  margin: 1em;
+  padding: 0.5em;
+}
+.play > span {
+  border: 1px solid #330;
+  display: block;
+  height: 200px;
+  margin-top: 2em;
+  width: 200px;
+}
+
+.layers-1 {
+  background-image: linear-gradient(.28turn, red 45%, transparent 50%),
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAyCAYAAAAZUZThAAADAUlEQVR4Xu2b3W6rMBCEl59Wjfp8eZ++dhPbVMNk4xBVR6ovzkX0VULUeO01dEcfA3SKr68tXulnnvN8tpimiGnyftu2UN+29WMR6nO849zvOfrW24rMMZpP7fYQ67bz5Lzudx797lytbbEsbd/3Puf0Op7H5fpbTFPPqbh5blGr+yPqPoePR7RWb8c9ztehRSnKX/c456sPeXW9SiyL1ul+zauxju/jdFwxOjfP43G5rlKUX+ep9ThW511Kb6/rFrW2WNdyn0vz6Npofl/P6y2/cnt7f/e4aSrx/d3i7U3zlv08dd7az/Oxfbm4re10uu5r03pqrXE6lX3/+dnifL7qfKaXFYhEoUI5CqaLJfufBZIFrHEuXhW0CztF4zHeMs5iUXwWVIrSRfkokF68+uNYTFm8Obf/yH1cikZ5VBxdhIpxcbugHovV4tFxr9NxOmYBu+h9frmlKFzUWp+LP4s8iy9F7LbntHiOQsw+5VFxPoqt3PN6HS5e5UuBZDGrz2JQMfc4x1/jctkOAkmRrKvFlG0JRmJ6FohEsizX+PjQfDXO5z3H6wrExQpBIAgEOdwhJjEgSL/NgSAQ5C4SPAgeBA/yj6cKEAQPkr5Ft5d4kCexQBAIAkEgCE+xbk+7eIr1x5c0EASCQBAIAkEgyB/RcQuHIBAEgkAQCAJBIMjxGy6+xfK3YHyLNaaMp1ss3qTzJp33IL9ICQ+CB8GD4EHwIHiQsTstCAJBIAgEgSAQBILwFIv/KBxTAQSBIBBkTDt4EDwIHgSCQBAIAkHwIHiQMRVAEAgCQca0gwfBg+BBIAgEgSAQBA+CBxlTAQSBIBBkTDt4EDwIHgSCQBAIAkHwIHiQMRVAEAgCQca0gwfBg+BBIAgEgSAQBA+CBxlTAQSBIBBkTDt4EDwIHgSCQBAIAkHwIHiQMRVAEAgCQca0gwfBg+BBIAgEgSAQBA+CBxlTAQSBIBBkTDt4EDwIHgSCQBAIAkHwIHiQMRVAEAgCQca0gwfBg+BBIAgE+T8E+QEkjvS4OXDi2QAAAABJRU5ErkJggg==),
+    linear-gradient(180deg, green 45%, transparent 50%),
+    linear-gradient(270deg, blue 45%, transparent 50%);
+  background-position: 0 0, 50% 50%;
+  background-size: auto, 100% 50%, 100% 100%, 75% 75%;
+  background-repeat: no-repeat;
+}
+
+.layers-2 {
+  background-color: skyblue;
+  background-image:
+    url(image-demo-layering.png),
+    linear-gradient(to top, olive, green 45%, rgba(255, 255, 255, 0.9) 45%, transparent 100%),
+    radial-gradient(circle at 60% 40%, yellow 30%, transparent 35%);
+}
+
+/* http://lea.verou.me/css3patterns/#weave */
+.patterns-1 {
+  background:
+    linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+    linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+  background-color: #708090;
+  background-size: 64px 128px;
+}
+
+/* http://lea.verou.me/css3patterns/#yin-yang */
+.patterns-2 {
+  background:
+    radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 50px 0,
+    radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 50px 0,
+    radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 0 50px,
+    radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 0 50px,
+    radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210,202,171,0) 17%),
+    radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54,78,39,0) 17%),
+    radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210,202,171,0) 17%) 50px 50px,
+    radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54,78,39,0) 17%) 50px 50px;
+  background-color: #63773F;
+  background-size: 100px 100px;
+}
+
+/* http://lea.verou.me/css3patterns/#japanese-cube */
+.patterns-3 {
+  background-color: #556;
+  background-image:
+    linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a),
+    linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+
+/*** Gradient Showcase ***/
+
+.bgimage-showcase-container {
+  background-color: #aaa;
+  border-radius: 0.5em;
+  position: absolute;
+  perspective: 10000px;
+  perspective-origin: 0 100%;
+  transition: height 1s;
+}
+.bgimage-showcase-layer {
+  border: 1px solid #330;
+  position: absolute;
+  transition: all 1s;
+}
+.bgimage-showcase-mode-3d .bgimage-showcase-layer,
+.bgimage-showcase-mode-3d-expanded .bgimage-showcase-layer {
+  border-width: 2px;
+}
