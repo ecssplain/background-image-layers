@@ -1,5 +1,8 @@
 body {
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  padding: 1em;
+}
+.examples {
   display: flex;
   flex-wrap: wrap;
 }

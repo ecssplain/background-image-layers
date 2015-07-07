@@ -6,37 +6,71 @@
   <link rel="stylesheet" href="play.css">
 </head>
 <body>
-  <div class="play">
-    <strong>Layering #1</strong>
-    <span class="layers-1"></span>
-  </div>
+  <p>This is just a quick-and-dirty demo page, extracted from <a href="http://gilmoreorless.github.io/sydcss-preso-gradient-circus/">http://gilmoreorless.github.io/sydcss-preso-gradient-circus/</a></p>
+  <p>Use left/right arrows to select different examples, and the number keys 1-4 to change the view.</p>
 
-  <div class="play">
-    <strong>Layering #2</strong>
-    <span class="layers-2"></span>
-  </div>
+  <div class="examples">
+    <div class="play">
+      <strong>Layering #1</strong>
+      <span class="layers-1"></span>
+    </div>
 
-  <div class="play">
-    <strong>Patterns #1</strong>
-    <span class="patterns-1"></span>
-  </div>
+    <div class="play">
+      <strong>Layering #2</strong>
+      <span class="layers-2"></span>
+    </div>
 
-  <div class="play">
-    <strong>Patterns #2</strong>
-    <span class="patterns-2"></span>
-  </div>
+    <div class="play">
+      <strong>Patterns #1</strong>
+      <span class="patterns-1"></span>
+    </div>
 
-  <div class="play">
-    <strong>Patterns #3</strong>
-    <span class="patterns-3"></span>
+    <div class="play">
+      <strong>Patterns #2</strong>
+      <span class="patterns-2"></span>
+    </div>
+
+    <div class="play">
+      <strong>Patterns #3</strong>
+      <span class="patterns-3"></span>
+    </div>
   </div>
 
   <script src="bgimage-showcase.js"></script>
   <script>
-    // TODO: Make this work for multiple elements simultaneously
-    bgImageShowcase.inspect(document.querySelector('.patterns-3'), {
-      padding: 30
-    });
+    (function () {
+      var elems = [].slice.call(document.querySelectorAll('.play > span'));
+      var curIndex;
+
+      function inspect(index) {
+        curIndex = index;
+        bgImageShowcase.inspect(elems[curIndex], {
+          padding: 30
+        });
+      }
+
+      document.addEventListener('keyup', function (e) {
+        var code = e.keyCode;
+        var index;
+        if (code === 37) {  // Left arrow
+          index = curIndex - 1;
+          if (index < 0) {
+            index += elems.length;
+          }
+        }
+        if (code === 39) {  // Right arrow
+          index = curIndex + 1;
+          if (index >= elems.length) {
+            index -= elems.length;
+          }
+        }
+        if (index !== undefined) {
+          inspect(index);
+        }
+      }, false);
+
+      inspect(0);
+    })();
   </script>
 </body>
 </html>
